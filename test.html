@@ -1,0 +1,98 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+</head>
+<body>
+	<span>審查類別：專門著作-理工醫</span>
+	<table border="3" width="800" cellpadding="2" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
+		<tr>
+			<td WIDTH="13%" VALIGN="MIDDLE" HEIGHT="69" align="center">著作編號</td>
+			<td WIDTH="17%" VALIGN="MIDDLE" HEIGHT="69" align="center">2024020306</td>
+			<td WIDTH="5%" VALIGN="MIDDLE" HEIGHT="69" align="center">所屬系所</td>
+			<td WIDTH="23%" VALIGN="MIDDLE" HEIGHT="69" align="center" COLSPAN="3">外科學科</td>
+			<td WIDTH="5%" VALIGN="MIDDLE" HEIGHT="69" align="center">送審等級</td>
+			<td WIDTH="11%" VALIGN="MIDDLE" HEIGHT="69" align="center" COLSPAN="3"><b>副教授</b></td>
+			<td WIDTH="6%" VALIGN="MIDDLE" HEIGHT="69" align="center">姓名</td>
+			<td WIDTH="15%" VALIGN="MIDDLE" HEIGHT="69" align="center" COLSPAN="3">趙盈瑞</td>
+		</tr>
+		<tr>
+			<td WIDTH="13%" VALIGN="MIDDLE" HEIGHT="69">
+				<p align="center">代表著作名稱
+			</td>
+			<td WIDTH="87%" VALIGN="MIDDLE" HEIGHT="69" COLSPAN="13"><b>Minimally invasive approaches increase postoperative complications in obese patients undergoing pancreaticoduodenectomy during the initial development period: a propensity score matching study</b></td>
+		</tr>
+		<tr>
+			<td VALIGN="top" COLSPAN="14">
+				※外審成績滿分為100分。<font color='red'><b>擬升等副教授者，以75分為及格，未達75分者為不及格</b></font>
+			</td>
+		</tr>
+		<tr>
+			<td WIDTH="64%" VALIGN="MIDDLE" align="center" COLSPAN="8">代表著作（前一等級至本次申請等級間）評分項目及標準</td>
+			<td WIDTH="17%" VALIGN="MIDDLE" align="center" COLSPAN="3" ROWSPAN="2">前一等級至本次申請等級間個人學術與專業之整體成就</td>
+			<td WIDTH="19%" VALIGN="MIDDLE" align="center" COLSPAN="3" ROWSPAN="2">總分</td>
+		</tr>
+		<tr>
+			<td WIDTH="13%" VALIGN="MIDDLE" align="center">項目</td>
+			<td WIDTH="17%" VALIGN="MIDDLE" align="center">研究主題</td>
+			<td WIDTH="17%" VALIGN="MIDDLE" align="center" COLSPAN="3">研究方法及能力</td>
+			<td WIDTH="17%" VALIGN="MIDDLE" align="center" COLSPAN="3">研學術及實務貢獻</td>
+		</tr>
+		<tr>
+			<td WIDTH="13%" VALIGN="MIDDLE" align="center">副教授</td>
+			<td WIDTH="17%" VALIGN="MIDDLE" align="center"><input type='hidden' name='scoretext1' id='scoretext1' value='10'>10%</td>
+			<td WIDTH="17%" VALIGN="MIDDLE" align="center" COLSPAN="3"><input type='hidden' name='scoretext2' id='scoretext2' value='20'>20%</td>
+			<td WIDTH="17%" VALIGN="MIDDLE" align="center" COLSPAN="3"><input type='hidden' name='scoretext3' id='scoretext3' value='30'>30%</td>
+			<td WIDTH="17%" VALIGN="MIDDLE" align="center" COLSPAN="3"><input type='hidden' name='scoretext4' id='scoretext4' value='40'>40%</td>
+			<td WIDTH="19%" VALIGN="MIDDLE" align="center" COLSPAN="3" ROWSPAN="2">
+				<input type='hidden' name='judge' id='judge' value='75'>
+				<input type="text" size="5" name="TotalScore" id="TotalScore" value="0" readonly="true" />
+				<script>
+					function keyin() {
+						var score1 = parseInt(document.getElementById('score1').value);
+						var score2 = parseInt(document.getElementById('score2').value);
+						var score3 = parseInt(document.getElementById('score3').value);
+						var score4 = parseInt(document.getElementById('score4').value);
+						var scoretext1 = parseInt(document.getElementById('scoretext1').value);
+						var scoretext2 = parseInt(document.getElementById('scoretext2').value);
+						var scoretext3 = parseInt(document.getElementById('scoretext3').value);
+						var scoretext4 = parseInt(document.getElementById('scoretext4').value);
+						document.getElementById('TotalScore').value = score1 + score2 + score3 + score4;
+
+						//判斷是否及格
+						var judge = parseInt(document.getElementById('judge').value);
+						var TotalScore = score1 + score2 + score3 + score4;
+						if (TotalScore < judge) {
+							document.getElementById('total1').textContent = '不及格(總分' + TotalScore + '，未達及格分數' + judge + ')';
+						}
+						else {
+							document.getElementById('total1').textContent = '及格(總分' + TotalScore + '，已達及格分數' + judge + ')';
+						}
+
+					}
+				</script>
+			</td>
+		</tr>
+
+		<tr>
+			<td WIDTH="13%" VALIGN="MIDDLE" align="center">得分</td>
+			<td WIDTH="17%" VALIGN="MIDDLE">
+				請輸入(0-10)
+				<input name="score1" id="score1" type="number" size="3" min="0" max="10" value="0" onchange="keyin()" required />
+			</td>
+			<td WIDTH="17%" VALIGN="MIDDLE" COLSPAN="3">
+				請輸入(0-20)
+				<input name="score2" id="score2" type="number" size="3" min="0" max="20" value="0" onchange="keyin()" required />
+			</td>
+			<td WIDTH="17%" VALIGN="MIDDLE" COLSPAN="3">
+				請輸入(0-30)
+				<input name="score3" id="score3" type="number" size="3" min="0" max="30" value="0" onchange="keyin()" required />
+			</td>
+			<td WIDTH="17%" VALIGN="MIDDLE" COLSPAN="3">
+				請輸入(0-40)
+				<input name="score4" id="score4" type="number" size="3" min="0" max="40" value="0" onchange="keyin()" required />
+			</td>
+		</tr>
+	</table>
+	<p></p>
+</body>
+</html>	
